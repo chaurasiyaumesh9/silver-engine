@@ -86,7 +86,8 @@
     "lint:ts": "tslint -c tslint.json -p tslint-tsconfig.json --fix",
     "start:server": "cd server && ts-node-dev --respawn --transpileOnly ./server.ts && wait-on tcp:5000",
     "start:app": "node scripts/start.js",
-    "start": "run-p --race start:server start:app",
+    "start:dev": "run-p --race start:server start:app",
+    "start": "run -p --race build start:app",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "prettier": "prettier --write '**/*.{tsx,ts,jsx,js,json}'"
